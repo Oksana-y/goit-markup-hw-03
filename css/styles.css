@@ -1,0 +1,250 @@
+:root {
+    --primary-text-color:  #212121;
+    --secondary-text-color: #757575;
+    --white-text-color: #FFFFFF;
+    --accent-text-color: #2196F3;
+} 
+.page {
+    color: var(--primary-text-color);
+    background-color: #F5F5F5;
+    font-family: Roboto, sans-serif;
+    }
+    /* Стилі li,a встановлюю до кожного розділу окремо класом point */
+/* li {
+    list-style-type: none;
+}   */
+/* a {
+    text-decoration: none;
+}   */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    outline: 2px solid #000000;
+}
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    outline: 2px solid tomato;
+}
+    /*Header. Колір та текст*/
+.top {
+    background-color: #FFFFFF;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+      }    
+    /* Logo */
+.logo {
+    color: var(--accent-text-color);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+ }   
+.logo .black {
+    color: #000000;
+}
+
+    /* Site-nav */
+.link {
+   color:  var(--primary-text-color);
+   text-decoration: none;
+   }  
+.site-nav .link:hover, 
+.site-nav .link:focus {
+    color: var(--accent-text-color);
+    }
+.link-active {
+    color: var(--accent-text-color);
+    text-decoration: none;
+     } 
+       
+/*  Перехід на сторінки сайту з формою для листування та з'єднання скайпом*/
+.contact-link {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+} 
+.point {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: aqua;
+}
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--accent-text-color);
+    }
+
+/* Банер */
+.banner {
+ background-color: #2F303A;
+  }
+.banner-text {
+margin-top: 0;
+margin-bottom: 30px;
+color: var(--white-text-color);
+font-weight: 900;
+font-size: 44px;
+line-height:1.36;
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+background-color: aqua;
+} 
+/* Кнопка замовлення */
+.order {
+    border-radius: 4px;
+    padding: 10px 32px;
+    margin-bottom: 200px;
+    min-width: 216px;
+    color: var(--white-text-color);
+    background-color: var(--accent-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+} 
+
+/* Секція переваг */
+
+/* Ховаємо заголовок */
+.block {
+    display: none;
+}
+/* Для зоголовків одного типу сторінки */
+.text-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    background-color: aqua;
+}
+.advantage {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    background-color: aqua;
+}
+.text {
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+/* Секція команди */
+/* .team {
+    background-color: #F5F4FA;
+} */
+.name {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+.career {
+   color: var(--secondary-text-color);
+   font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em
+}
+
+/* Сторінка Портфоліо */
+
+/* Блок сортувальних кнопок */
+.sort button {
+    /* margin: 6px 22px;
+    min-width: 130px; */
+    color: var(--title-text-color);
+    background-color: #F5F4FA;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    }
+    
+.sort button:hover, 
+.sort button:focus {
+    color: var(--white-text-color);
+    background-color: var(--accent-text-color);
+} 
+
+/* Реалізовані проекти компанії */
+.projects-title {
+   color: var(--primary-text-color);
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 2.0;
+   letter-spacing: 0.06em;
+}
+.projects-text {
+   color: var(--secondary-text-color);
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.88;
+   letter-spacing: 0.03em;
+}
+
+/* Footer */
+.white {
+    color: #FFFFFF;
+}
+.adress {
+    background-color: #2F303A;
+  }
+.adress .link {
+    color: var(--white-text-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    font-style: normal;
+}
+.link-contacts {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    font-style: normal;
+}
+.adress .link:hover,
+.adress .link:focus,
+.link-contacts:hover,
+.link-contacts:focus {
+    color: var(--accent-text-color);
+}
+
+/* Кольорова гама */
+/*Основний колір тексту #212121*/
+/*Вторинний колір тексту #757575 */
+/*Cвітлий колір тексту #FFFFFF */
+/* Колір лого #2196F3,#000000*/
+/* Колір кнопок #F5F4FA/
+/* Колір акценту #2196F3 /
+/* Колір сторінки #F5F5F5;/
+/* Колір навігації #FFFFFF*/
+/* Колір банеру та футеру #2F303A/
+/* Колір секції команди #F5F4FA;/
+/* Колір контактів футеру rgba(255, 255, 255, 0.6); */
