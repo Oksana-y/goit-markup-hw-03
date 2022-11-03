@@ -3,6 +3,7 @@
     --secondary-text-color: #757575;
     --white-text-color: #FFFFFF;
     --accent-text-color: #2196F3;
+    --main-background-color: #FFFFFF;
 } 
 .page {
     color: var(--primary-text-color);
@@ -10,34 +11,48 @@
     font-family: Roboto, sans-serif;
     }
     /* Стилі li,a встановлюю до кожного розділу окремо класом point */
-/* li {
+ul {
     list-style-type: none;
-}   */
-/* a {
-    text-decoration: none;
-}   */
+    /* margin: 0;
+    padding: 0; */
+}  
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
     outline: 2px solid #000000;
 }
 .container {
-    width: 1200px;
+    max-width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
     margin: 0 auto;
     outline: 2px solid tomato;
 }
     /*Header. Колір та текст*/
-.top {
-    background-color: #FFFFFF;
-    font-weight: 500;
+.main-nav {
+    display: flex;
+    align-items: center;
+   /* background-color: var(--main-background-color); */
+    outline: 2px solid black;}
+/* .top {
+    
+    /* font-weight: 500;
     font-size: 14px;
-    line-height: 1.14;
-      }    
+    line-height: 1.14; */
+    /* background-color: var(--white-text-color); */
+    
     /* Logo */
 .logo {
-    color: var(--accent-text-color);
+    margin-right: 93px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -45,16 +60,34 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
+    color: var(--accent-text-color);
  }   
 .logo .black {
     color: #000000;
 }
-
+.top .logo {
+    padding: 25px 93px 25px 0;
+}
     /* Site-nav */
 .link {
    color:  var(--primary-text-color);
    text-decoration: none;
-   }  
+}  
+.navigation {
+    display: flex;
+}
+
+/* .point {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; */
+    /* background-color: aqua; */
+
+.navigation li:not(:last-child),
+.contact li:not(:last-child) {
+    margin-right: 50px;
+}
+
 .site-nav .link:hover, 
 .site-nav .link:focus {
     color: var(--accent-text-color);
@@ -63,18 +96,18 @@
     color: var(--accent-text-color);
     text-decoration: none;
      } 
-       
+ 
+     
 /*  Перехід на сторінки сайту з формою для листування та з'єднання скайпом*/
 .contact-link {
-    color: var(--secondary-text-color);
     text-decoration: none;
+    color: var(--secondary-text-color);
 } 
-.point {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    background-color: aqua;
+.contact {
+    display: flex;
+    margin-left: auto;
 }
+
 .contact-link:hover,
 .contact-link:focus {
     color: var(--accent-text-color);
@@ -82,33 +115,45 @@
 
 /* Банер */
 .banner {
- background-color: #2F303A;
+    
+    padding: 200px 0px;
+    background-color: #2F303A;
+    align-content: center;
   }
 .banner-text {
-margin-top: 0;
-margin-bottom: 30px;
-color: var(--white-text-color);
-font-weight: 900;
-font-size: 44px;
-line-height:1.36;
-text-align: center;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-background-color: aqua;
+    /* margin-top: 0; */
+    margin-bottom: 30px;
+    /* padding-top: 200px; */
+    color: var(--white-text-color);
+    font-weight: 900;
+    font-size: 44px;
+    line-height:1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+/* background-color: aqua; */
 } 
 /* Кнопка замовлення */
-.order {
+.banner .order {
+    justify-content: center;
+    /* padding: 10px 32px; */
     border-radius: 4px;
-    padding: 10px 32px;
-    margin-bottom: 200px;
-    min-width: 216px;
-    color: var(--white-text-color);
-    background-color: var(--accent-text-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    width: 216px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: block;
+    
+
+    text-align: center;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
+
+    color: var(--white-text-color);
+    background-color: var(--accent-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
 } 
 
 /* Секція переваг */
@@ -127,8 +172,36 @@ background-color: aqua;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+    /* background-color: aqua; */
+}
+.list,
+.proces { 
+    display: flex;
+    margin: auto;
+}
+.list .card {
+    width: 270px;
+    margin-bottom: 118px;
+    background-color: aqua;
+    justify-content: space-between;
+
+}
+.card :nth-last-child(4){
+    margin-right: 30px;
+}
+.team-card {
+    display: flex;
+    align-content: space-between;
     background-color: aqua;
 }
+.team-card.file {
+    max-width: 270px;
+    margin-right: 30;
+    margin-bottom: 94px;
+    text-align: center;
+    outline: 2px solid black;
+}
+.team-card.file:nth-last-child(4)
 .advantage {
     margin-top: 0;
     margin-bottom: 10px;
@@ -137,15 +210,19 @@ background-color: aqua;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
-    background-color: aqua;
-}
+    }
+/* .block-adv .point {
+    display:  ; */
+/* } */
 .text {
-    color: var(--secondary-text-color);
-    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 118px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
 }
+
 
 /* Секція команди */
 /* .team {
@@ -161,73 +238,127 @@ background-color: aqua;
     letter-spacing: 0.03em;
 }
 .career {
-   color: var(--secondary-text-color);
-   font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--secondary-text-color);
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em
+}
+.team {
+    margin-bottom: 30px;
 }
 
 /* Сторінка Портфоліо */
 
 /* Блок сортувальних кнопок */
-.sort button {
+.btn {
+    display: flex;
+   
+}
+.btn button {
     /* margin: 6px 22px;
     min-width: 130px; */
-    color: var(--title-text-color);
+    min-width: 130px;
     background-color: #F5F4FA;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
     letter-spacing: 0.03em;
+    color: var(--title-text-color);
     }
-    
-.sort button:hover, 
-.sort button:focus {
+
+.btn button:hover, 
+.btn button:focus {
     color: var(--white-text-color);
     background-color: var(--accent-text-color);
 } 
 
+.activity .point {
+    display: flex;
+}
 /* Реалізовані проекти компанії */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: aqua;
+    /* gap: 30px; */
+}
+.projects .example {
+    width: 370px;
+    margin-bottom: 30px;
+    /* margin-right: 30px; */
+    outline: 2px solid black;
+    text-align: center;
+}
+/* .projects .example:nth-child(3n) {
+    margin-right: 0px;
+} */
+.example:nth-last-child(-n+3) {
+    margin-bottom: 30px;
+}
+
+
 .projects-title {
+   margin-top: 0;
+   margin-bottom: 4px;
    color: var(--primary-text-color);
    font-weight: 700;
    font-size: 18px;
    line-height: 2.0;
    letter-spacing: 0.06em;
+   /* background-color: #2196F3; */
 }
 .projects-text {
-   color: var(--secondary-text-color);
+   
    font-weight: 400;
    font-size: 16px;
    line-height: 1.88;
    letter-spacing: 0.03em;
+   color: var(--secondary-text-color);
+}
+.projects .link:hover,
+.projects .link:focus {
+color: var(--accent-text-color);
+/* background-color: var(--accent-text-color); */
 }
 
 /* Footer */
-.white {
-    color: #FFFFFF;
+.adress .logo {
+    padding-top: 60px;
+    margin-bottom: 20px;
 }
-.adress {
+.white {
+    color: var(--white-text-color);
+}
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding: 60px 215px;
     background-color: #2F303A;
+    ;
   }
 .adress .link {
-    color: var(--white-text-color);
+    margin-bottom: 9px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration: none;
     font-style: normal;
+    color: var(--white-text-color);
 }
 .link-contacts {
-    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 9px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration: none;
     font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
 }
 .adress .link:hover,
 .adress .link:focus,
