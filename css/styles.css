@@ -9,7 +9,6 @@
   --borde-line-color: #ececec;
 }
 body {
-  max-width: 1600px;
   margin: 0 auto;
   color: var(--primary-text-color);
   background-color: var(--main-background-color);
@@ -34,7 +33,7 @@ p {
   padding-bottom: 94px;
 }
 .container {
-  max-width: 1230px;
+  max-width: 1200px;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -45,11 +44,11 @@ p {
 
 .header {
   background-color: var(--main-background-color);
-  border-bottom: 1px solid var(--borde-line-color);
 }
 .main-nav {
   display: flex;
   align-items: center;
+  border-bottom: 2px solid var(--borde-line-color);
 }
 /* Logo */
 .logo {
@@ -138,7 +137,7 @@ p {
 
   color: var(--white-text-color);
   background-color: var(--accent-text-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
 }
 /* Секція переваг */
 
@@ -156,14 +155,18 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.list,
+
 .proces {
   display: flex;
   justify-content: space-between;
 }
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
 .list .card {
   min-width: 270px;
-  margin-bottom: 118px;
   margin-right: 30px;
   text-align: start;
 }
@@ -187,7 +190,6 @@ p {
 }
 .text {
   margin-top: 0;
-  margin-bottom: 118px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -202,11 +204,10 @@ p {
 .team-card {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 .team-card .file {
   max-width: 270px;
-  margin-right: 30px;
-  margin-bottom: 94px;
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -319,11 +320,12 @@ p {
   display: flex;
   align-items: center;
   margin-right: auto;
-  padding-top: 60px;
+  /* padding-top: 60px; */
   padding-bottom: 60px;
   background-color: var(--dark-background-color);
 }
 .footer .logo {
+  display: block;
   padding-top: 60px;
   margin-bottom: 20px;
 }
